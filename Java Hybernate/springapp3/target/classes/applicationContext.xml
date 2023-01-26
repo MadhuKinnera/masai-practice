@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="employee1" class="com.masai.q5.Employee" >
+<constructor-arg value="10"/>
+<constructor-arg value="Madhu"/>
+<constructor-arg value="Hyderabad"/>
+<constructor-arg value="70000"/>
+</bean>
+
+<bean id="employee2" class="com.masai.q5.Employee" >
+<constructor-arg value="11"/>
+<constructor-arg value="pavan"/>
+<constructor-arg value="warangal"/>
+<constructor-arg value="60000"/>
+</bean>
+
+<bean id="employee3" class="com.masai.q5.Employee" >
+<constructor-arg value="12"/>
+<constructor-arg value="prasad"/>
+<constructor-arg value="hanmakonda"/>
+<constructor-arg value="80000"/>
+</bean>
+
+
+<bean id="dept-accounts" class="com.masai.q5.Department">
+<constructor-arg value="100"/>
+<constructor-arg value="Accounts"/>
+<constructor-arg value="Chennai"/>
+
+</bean>
+
+<bean id="dept-marketing" class="com.masai.q5.Department">
+<constructor-arg value="200"/>
+<constructor-arg value="marketing"/>
+<constructor-arg value="mumbai"/>
+
+</bean>
+
+<bean id="dept-sales" class="com.masai.q5.Department">
+<constructor-arg value="300"/>
+<constructor-arg value="sales"/>
+<constructor-arg value="delhi"/>
+
+</bean>
+
+<bean id="demo" class="com.masai.q5.Demo" init-method="myInit" lazy-init="true" destroy-method="cleanUp" />
+
+
+</beans>

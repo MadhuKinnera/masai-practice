@@ -1,0 +1,14 @@
+Differences between ArrayList and LinkedList
+
+ArrayList
+---------
+1. data Presents in Contigous memory Locations 
+2. Better for retrival based on index
+3. this class Has no own methods 
+
+
+LinkedList
+----------
+1. data Presents in Non- contigous Memory Location 
+2. better for operations like insertion and deletion from middle
+3. it is also implements Deque Interface from java 1.5 

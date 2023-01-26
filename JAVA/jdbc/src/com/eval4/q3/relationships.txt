@@ -1,0 +1,62 @@
+Relationships among  tables in database
+---------------------------------------
+in dbms  there are 3 types of relations exits
+1. One to one 
+2. one to many 
+3. many to many
+
+one to one relation ship
+
+--------------------------
+in this two tables are in one to one relationship 
+
+unique data present over the tables
+
+the foreign key must be unique
+
+example : aadhaar card ,person
+
+one person contain only one aadhaar card and one aadhaar is only for one person
+
+
+many to one
+-----------
+in this one table contains foreign key which is primary key
+in another table 
+
+one table contain only unique data in primary key
+
+another table contain foreign key which accepts duplicates also
+
+example
+-------
+
+department - employee 
+in one department there is so many employees 
+
+one employee belongs to only one department
+
+many to many
+-----------
+
+* in this relationship a table can create many rows usign another table primary key
+
+example
+-------
+student - course
+
+one student can take many courses
+
+also
+
+one course can allowed to take by so many student
+
+
+here we need another table to manage the student and course
+data
+
+here student_course table will store the data with student primary key
+and course primary key
+
+we can fetch the data using nested queries or 
+joins.

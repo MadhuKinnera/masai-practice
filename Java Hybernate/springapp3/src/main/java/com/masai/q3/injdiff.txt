@@ -1,0 +1,22 @@
+What is the difference between setter injection and constructor injection?
+===========================================================================
+
+setter injections
+------------------
+* using setters we can inject values
+* partial insertion is possible
+* for less no of properties it is recommended
+* it has higher prorioty than constructor injection
+
+
+
+constructor injection
+----------------------
+
+* using constructor we will inject values
+* partial insertion is not possible
+* more number of properties constructor is recommended
+* it has lower prorioty than setter injection
+* used to inject values for final variables
+
+

@@ -1,0 +1,23 @@
+What is auto wiring in Spring, how many types of Auto wiring are there in spring,
+explain with an example.
+
+* the process of injecting the values automatically is called autowiring.
+* we can use the autowire attribute in xml or @autowire annotation to achieve it.
+
+there are 4 types of autowiring 
+
+1. No autowiring
+*by default it doesnot follow autowiring
+* we can able to inject values explicitly
+
+2. byName
+* for this autowiring the name of the field and bean must be same.
+
+3. byType
+* for this the type of the bean and the dependency is to match.
+* if more than one type of same beans located it will raise an exception
+
+4. constructor
+* using constructor only we can inject the values.
+
+

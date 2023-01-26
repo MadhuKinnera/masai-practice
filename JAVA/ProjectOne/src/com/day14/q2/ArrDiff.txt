@@ -1,0 +1,17 @@
+The Difference between ArrayList and Arrays are : 
+
+ArrayList
+---------
+
+1. ArrayList is Shrinkable and growable
+2. ArrayList has high method support
+3. Size is not fixed.
+4. Supports Both Homogenius and heterogenius types of data
+
+Array
+-----
+
+1.Arrays are fixed sized.
+2.No method support only one nonstatic variable length is present
+3.Not growable and shrinkable
+4.Only homogenius datatype supports.

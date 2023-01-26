@@ -1,0 +1,31 @@
+
+What are the advantages of using Hibernate over JDBC?
+======================================================
+
+* Hibernate is a ORM software framework used to map java objects 
+into Relation database mangament system.
+
+* Hibernate Implements Java Persistence API so we can use 
+either hibernate apis or JPA api from hibernate
+
+* in JDBC We manually require need to write queries.
+
+* in JDBC So much code repeatation is there while taking connection
+
+* We have to handle Checked Exceptions in JDBC
+
+* Retriving the data consumes more varaibles to store relation data
+in individual variables.
+
+* JDBC Doesn't handle Mismatch like 
+IS-A mismatch
+HAS-A mismatch
+Relational Mismatch
+
+
+* Performing DML and various operations made easy in Hibernate .
+
+* we can easily add hibernate in maven instead of adding all 
+
+jar files in classpath manually in jdbc.
+

@@ -1,0 +1,73 @@
+womenDressArr=[
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/1f/P00709974.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 585",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/5d/P00710025.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+      {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00712412.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 499",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00712412.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1555",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e0/P00709999.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a4/P00712474.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 499",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a7/P00712480.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1009",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/35/P00709970.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1429",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8c/P00709981.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 585",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00709993.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 795",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2d/P00709954.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1429",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7d/P00712487.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 415",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ec/P00710001.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/26/P00709987.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    }
+  
+]

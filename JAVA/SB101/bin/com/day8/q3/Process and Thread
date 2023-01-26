@@ -1,0 +1,28 @@
+Difference between Process and Thread
+-------------------------------------
+
+Process
+-------
+
+* It is heavy weight process
+
+* It means a program under excution
+
+* creation and termination takes more time
+
+* Does not share data with each other
+
+* System calls are involved
+
+
+Thread
+------
+* It is a light weight process
+
+* It means segment of a process
+
+* Creation and termination takes less time
+
+* Shares data with each other
+
+* No system calls are involved.

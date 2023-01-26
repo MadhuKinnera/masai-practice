@@ -1,0 +1,15 @@
+package com.madhu;
+
+public class GmailSender {
+	
+	boolean sendGmail(String to , String from , String subject , String text) {
+		boolean flag = false;
+		
+		//logic
+		
+		
+		
+		return flag;
+	}
+
+}

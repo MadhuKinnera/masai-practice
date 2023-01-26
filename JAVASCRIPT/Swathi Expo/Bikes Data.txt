@@ -1,0 +1,54 @@
+let arr=[
+{image:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fbajaj%2Fpulsar-n160%2Fbajaj-pulsar-n160.jpg%3Fv%3D2&w=1920&q=75",
+company:"BAJAJ"
+name:"Bajaj Pulsar",
+Model:"N160",
+price:"Rs.1,22,854"
+},
+
+{image:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fsuzuki%2Fv-strom-sx-250%2Fsuzuki-v-strom-sx-250.jpg%3Fv%3D9&w=1920&q=75",
+company:"SUZIKI",
+name:"V-STROM ",
+Model:"SX 250",
+price:"Rs.2,12,000"
+},
+
+
+{image:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Ftriumph%2Ftiger-sport-660%2Ftriumph-tiger-sport-660.jpg%3Fv%3D11&w=1920&q=75",
+company:"TRIUMPH",
+name:"Tiger Sport",
+Model:"660",
+price:"Rs.8,95,000"
+},
+
+{image:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Froyal-enfield%2Fscram-411%2Froyal-enfield-scram-411.jpg%3Fv%3D15&w=1920&q=75",
+company:"ROYAL ENFIELD",
+name:"Royal Enfield Scram",
+Model:"411",
+price:"Rs.2,03,000"
+},
+
+{image:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fyezdi%2Fscrambler%2Fyezdi-scrambler.jpg%3Fv%3D12&w=1920&q=75",
+company:"YEZDI",
+name:"Yezdi Scrambler",
+Model:"Scrambler",
+price:"Rs.2,05,000"
+},
+
+
+{image:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fbenelli%2Ftrk-251%2Fbenelli-trk-251.jpg%3Fv%3D5&w=1080&q=75",
+company:"BENELLI",
+name:"Benelli TRK ",
+Model:"251",
+price:"Rs.2,51,000"
+},
+
+{image:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fkawasaki%2Fz650rs%2Fkawasaki-z650rs.jpg%3Fv%3D13&w=1080&q=75",
+company:"KAWASAKI"
+name:"Kawasaki Z650RS",
+Model:"Z650RS",
+price:"Rs.6,72,000"
+},
+
+
+]

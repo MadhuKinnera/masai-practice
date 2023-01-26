@@ -1,0 +1,61 @@
+package com.masai.files;
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int tc = sc.nextInt();
+		while(tc-->0) {
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+		int[] arr = new int[N];
+
+		for(int i=0;i<N;i++){
+			arr[i]=sc.nextInt();
+		}
+		
+		int ans = noOfOps(arr,N,M);
+		System.out.println(ans);
+
+		}
+	}
+	
+	public static int noOfOps(int[] arr , int N , int M) {
+		
+		int count=0;
+		int i=0;
+		while(i<N-1){
+			List<Integer> temp = new ArrayList<>();
+			temp.add(i);
+			for(int j=i+1;j<N;j++) {
+				if(arr[i]>arr[j]) {
+					temp.add(j);
+				}
+			}
+			if(temp.size()>1) {
+				count++;
+				for(int j=0;j<temp.size();j++) {
+					arr[temp.get(j)]=(arr[temp.get(j)]+1)%M;
+				}
+			}else {
+				i++;
+			}
+			
+			//System.out.println("After "+count+" "+ Arrays.toString(arr));
+
+			
+		}
+		
+		return count;
+			
+	}
+	
+}

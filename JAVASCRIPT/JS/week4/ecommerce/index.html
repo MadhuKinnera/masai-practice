@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page(nav)</title>
+</head>
+<style>
+    #nav{
+        width:90%;
+        margin:auto;
+        background-color:black;
+        height:80px;
+        border-radius:15px;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #nav > div{
+        width:40%;
+    }
+    #nav > div+div{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    p{
+        color:white;
+    }
+    a{
+        color:yellow;
+    }
+</style>
+<body>
+    <div id="nav">
+        <div>
+            <p> Rebook</p>
+           </div>
+        <div>
+            <p> <a href="mens.html">Men</a></p>
+            <p> <a href="women.html">Women</a></p>
+            <p> <a href="login.html">Login</a></p>
+            <p> <a href="signup.html">Signup</a></p>
+        </div>
+
+    </div>
+</body>
+</html>

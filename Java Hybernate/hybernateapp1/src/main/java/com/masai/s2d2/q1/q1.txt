@@ -1,0 +1,16 @@
+Limitations of Entity Manager
+==============================
+
+1. Using Entity Manager we can only perform following 4 operations.
+
+  1.find()
+  2.persist()
+  3.remove()
+  4.merge()
+  
+  * we can't find a Object without using primary key.
+  * we can't persist() a object without any missing value (partial insertion)
+  * we can't insert or remove bulk of data in database
+  * we can't write our own needed query.
+  
+  

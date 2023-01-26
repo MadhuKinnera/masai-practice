@@ -1,0 +1,18 @@
+jdbc
+----
+jdbc is a technology which has set of rules to design the jdbc driver software
+ this is known as specification
+ 
+ jdbc driver software
+ ---------------------
+ it is the implementation of the jdbc specification 
+ 
+ normally provided by the database vendor.
+ 
+ we can also use the 3rd party jdbc driver softwares because they also designed by 
+ the rules of jdbc specification..
+ 
+ in terms of my sql the drive software name is .
+ mysql-connector
+ 
+ 

@@ -1,0 +1,10 @@
+Differences between static and non-static
+
+1.static members are directly available to RAM
+2.static members are accesable without any object
+3.an java application must contain atleast one static member to run 
+the program
+4.non-static variables are accesable using objects only.
+5.we genarally access static members using class name 
+classname.staticmembername
+6.we declare the common attributes for all objects using static.

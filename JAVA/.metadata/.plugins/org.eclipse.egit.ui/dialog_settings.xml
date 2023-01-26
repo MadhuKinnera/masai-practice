@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="file://C:\Users\kinne\git\Madhu_fw19_0286"/>
+		<item value="MadhuKinnera@github.com:masai-course/Madhu_fw19_0286.git"/>
+		<item value="git@github.com:masai-course/Madhu_fw19_0286.git"/>
+		<item value="https://github.com/masai-course/Madhu_fw19_0286.git"/>
+		<item value="file://C:\Users\kinne\OneDrive\Desktop\JAVA\Madhu_fw19_0286"/>
+		<item value="https://github.com/MadhuKinnera/team-TimeComplexity.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\kinne\.git">
+			<item value="false"/>
+			<item value="MadhuKinnera &lt;hollypoter5@gmail.com&gt;"/>
+			<item value="hhh"/>
+			<item value="MadhuKinnera &lt;hollypoter5@gmail.com&gt;"/>
+			<item value="69db881a79745676b77c3049a0cab9fafdf1b007"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+		<list key="C:\Users\kinne\git\Madhu_fw19_0286\.git">
+			<item value="empty"/>
+		</list>
+	</section>
+</section>

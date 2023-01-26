@@ -1,0 +1,39 @@
+package com.masai.day2;
+
+public class Cat extends Animal{
+	
+	private String nickname;
+	
+	public Cat() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Cat(String nickname) {
+		this.nickname=nickname;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Cat(String nickname,String name) {
+		super(name);
+		this.nickname=nickname;
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+	
+	@Override
+	public void makeNoise() {
+		System.out.println("mew mew");
+		
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("cat is eating");
+		
+	}
+
+
+}

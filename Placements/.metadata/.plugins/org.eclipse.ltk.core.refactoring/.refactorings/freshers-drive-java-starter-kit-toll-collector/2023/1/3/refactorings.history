@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;VehicleIntr.java&apos; to &apos;TollCalculatorIntr.java&apos;&#x0D;&#x0A;- Original project: &apos;freshers-drive-java-starter-kit-toll-collector&apos;&#x0D;&#x0A;- Original element: &apos;VehicleIntr.java&apos;&#x0D;&#x0A;- Renamed element: &apos;TollCalculatorIntr.java&apos;" description="Rename compilation unit &apos;VehicleIntr.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/freshers-drive-java-starter-kit-toll-collector\/src&lt;{VehicleIntr.java" name="TollCalculatorIntr.java" references="false" stamp="1673785245804" version="1.0"/>
+</session>

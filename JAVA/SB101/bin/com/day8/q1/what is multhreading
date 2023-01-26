@@ -1,0 +1,15 @@
+Thread
+------
+
+* Thread is a light weight process or part of a process.
+
+* excuting multiple sub processes simutanously is called multi threading
+  (different flow of excutions at a time)
+
+* This is important because in some situation we need to work with 2 or more method simutanously
+
+* By Inter-Thread communication we achieve that.
+
+* Perfomance of application is increased due to Multi-threading
+
+* Multi-threading used in animations,video games etc.where we need to perform more tasks at the same time

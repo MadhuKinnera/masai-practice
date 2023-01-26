@@ -1,0 +1,29 @@
+Entity Class LifeCycle
+======================
+
+1. new state
+-------------
+
+* whenever an object created for the entity class 
+then the object is said to be new state / transient state
+
+2.Persistence state
+--------------------
+* it is a state where the entity class object is in sync with 
+
+database table.
+
+* if we modify data in object it will reflect on database
+and vice versa
+
+* while the entity class object is used with the entity manager 
+then it said to be in persistence state
+
+
+3. detached state
+------------------
+
+* it is a state where the table and object are independent 
+to themselves
+
+* we use merge to go back to persistence state.

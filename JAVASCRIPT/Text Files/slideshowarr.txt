@@ -1,0 +1,5 @@
+arr=["https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_SarkaruVaariPaataTelugu_Launch/2747bbaf-e83d-4137-8a0e-1b92b47b242b._UR3000,600_SX1500_FMwebp_.jpeg",
+"https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_MultiTitle02_AP/4f508bc3-bc92-4cf0-bc9e-e124b2c771bd._UR3000,600_SX1500_FMwebp_.jpeg",
+"https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TVOD_MultiTitleAdventure/a34a1155-5d8d-4e54-97ff-647a7a2aac10._UR3000,600_SX1500_FMwebp_.jpeg"]
+
+

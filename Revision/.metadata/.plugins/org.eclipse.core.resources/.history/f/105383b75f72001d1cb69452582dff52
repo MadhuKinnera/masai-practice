@@ -1,0 +1,61 @@
+package com.masai.files;
+
+
+
+import java.lang.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.io.*;
+
+class Main
+{
+	
+	public void add(int x , int y){
+		System.out.println(x+y);
+	}
+	
+	
+	public void add(int x,int y,int z) {
+		System.out.println(x+y+z);
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "hello";
+	}
+	
+	
+	
+public static void main(String[] args) {
+	
+	int[] arr = new int[5];
+	arr[0]=1;
+	
+	List<Integer> list = new ArrayList<>();
+	list.add(1);
+	//System.out.println(list.indexOf(1));
+	//arraylist is growable..
+	//no method support for primitive arr
+
+	//Why strings are immutable in java ?
+			String str1 = "Hello";
+			
+		   String str2=  str1.concat("World");
+		     
+		     System.out.println(str2);//Hello
+		     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+}

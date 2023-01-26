@@ -1,0 +1,79 @@
+1)
+
+
+mysql> update  faculty set department = 'computer science' where department = 'cs';
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> update  faculty set department = 'electronics and communication ' where department = 'ec';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update  faculty set department = 'humanities and social science ' where department = 'hss';
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from faculty;
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+
+| facultyid | name    | department                     | gender | salary | workinghours | vacationhours |
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+
+|         1 | aakash  | computer science               | m      |  50000 |           45 |          NULL |
+|         2 | sahil   | electronics and communication  | m      |  25000 |           50 |          NULL |
+|         3 | john    | humanities and social science  | m      | 100000 |           60 |          NULL |
+|         4 | shelley | computer science               | f      |  75000 |           80 |          NULL |
+|         5 | anannya | computer science               | f      |  45000 |          100 |          NULL |
+|         6 | sia     | humanities and social science  | f      |  60000 |           40 |          NULL |
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+
+
+
+2)
+
+
+mysql> update faculty set vacationhours=20 where workinghours > 50 and workinghours<=80;
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update faculty set vacationhours=40 where workinghours > 80 and workinghours<=120;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from faculty;
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+
+| facultyid | name    | department                     | gender | salary | workinghours | vacationhours |
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+
+|         1 | aakash  | computer science               | m      |  50000 |           45 |          NULL |
+|         2 | sahil   | electronics and communication  | m      |  25000 |           50 |          NULL |
+|         3 | john    | humanities and social science  | m      | 100000 |           60 |            20 |
+|         4 | shelley | computer science               | f      |  75000 |           80 |            20 |
+|         5 | anannya | computer science               | f      |  45000 |          100 |            40 |
+|         6 | sia     | humanities and social science  | f      |  60000 |           40 |          NULL |
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+
+6 rows in set (0.00 sec)
+
+
+
+3)
+
+mysql> update faculty set vacation = 'allowed' where vacationhours > 0;
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> update faculty set vacation = ' not allowed' where vacationhours is null;
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select * from faculty;
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+--------------+
+| facultyid | name    | department                     | gender | salary | workinghours | vacationhours | vacation     |
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+--------------+
+|         1 | aakash  | computer science               | m      |  50000 |           45 |          NULL |  not allowed |
+|         2 | sahil   | electronics and communication  | m      |  25000 |           50 |          NULL |  not allowed |
+|         3 | john    | humanities and social science  | m      | 100000 |           60 |            20 | allowed      |
+|         4 | shelley | computer science               | f      |  75000 |           80 |            20 | allowed      |
+|         5 | anannya | computer science               | f      |  45000 |          100 |            40 | allowed      |
+|         6 | sia     | humanities and social science  | f      |  60000 |           40 |          NULL |  not allowed |
++-----------+---------+--------------------------------+--------+--------+--------------+---------------+--------------+
+6 rows in set (0.00 sec)
+
+
+

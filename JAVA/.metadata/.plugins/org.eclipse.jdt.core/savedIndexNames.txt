@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+C:\Users\kinne\OneDrive\Desktop\JAVA\.metadata\.plugins\org.eclipse.jdt.core
+796372323.index
+2281279252.index
+207817056.index
+1865797976.index
+2750716043.index
+3908403110.index
+789706220.index

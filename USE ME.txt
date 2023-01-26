@@ -1,0 +1,10 @@
+Questions
+----------
+
+1. Differences between WebServices and ApplicationService.
+
+2. What is Application Context.
+
+3. Working of a spring application.
+
+4. 

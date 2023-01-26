@@ -1,0 +1,31 @@
+Life cycle of Spring Bean
+==========================
+1. spring container started
+
+* in this phase spring container will start 
+
+2. Bean Intialized 
+* in this spring Bean is Created 
+
+3. Dependency injection
+* in this All the dependencies got values injected ..
+
+* some internal spring processing also done in this process
+
+4. custom init method
+* after creation of bean object a init method will invoked
+
+5. Bean ready
+
+* in this stage the bean is ready for use
+
+6. Container shutdown
+
+* when we close the connection of container then container will shutdown
+
+7. custom destroy
+
+* after excuting the shutdown statement custom destroy will invoke.
+
+
+This is the Life cycle of a bean

@@ -1,0 +1,10 @@
+Genarally Like C++ and other languages they are not fully Object Oriented 
+languages .
+Primitive datatypes representing in Objects in Known as Wrapper classes.
+But Java is a fully Object orented language.Fully OOPs means there is no 
+primitives(Primitive datatype) ..to make the primitives into Objects 
+The wrapper classes are used Hence Java is a fully OOPs language 
+in some situations in java the primitives are not allowed there the 
+wrapper classes helps very much 
+Wrapper classes has also some extra methods ..so they are better than the 
+primitive data types.

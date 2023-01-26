@@ -1,0 +1,12 @@
+
+public class Thread1 implements Runnable{
+
+	@Override
+	public void run() {
+		ThreadExample tExample = new ThreadExample();
+		tExample.staticThreadMethod();
+		tExample.threadMethod();
+		
+	}
+
+}

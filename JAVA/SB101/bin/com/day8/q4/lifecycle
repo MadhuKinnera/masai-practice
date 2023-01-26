@@ -1,0 +1,36 @@
+States and Life Cycle of a Thread
+---------------------------------
+
+ States
+ -------
+ 1. Creation
+ 
+ *in this state new Thread is created
+ 
+ 2. Runnable
+ 
+ * Here the thread is Started 
+ 
+ 3. Running
+ * Here the thread is excuting the code in run method
+ 
+ 4. Blocked
+ * if any Thread is in wait sleep it will go to block state and then runnable state
+ 
+ 5. Dead State
+ * after a successful excution of thread the thread is going to be dead.
+ 
+ Life Cycle
+ ----------
+ 
+  A Thread is created // new Thread
+         |
+   Thread is started //Runnable
+         |
+   Thread is Running  // Running
+         |
+   -----------------
+   |               |
+blocked        Dead State
+   |
+  Runnable state

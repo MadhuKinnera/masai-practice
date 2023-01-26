@@ -1,0 +1,56 @@
+1. a) a) Why String is immutable in java and what is the difference 
+between String and String Builder? And Write
+some of the methods of String class at least 5 with example.
+
+* String is immuatble means we are not able to change the string because
+all the string are created in scp(string constant pool)
+
+* The difference between string class and StringBuilder class is
+when we create an string using String class they are immutable .
+but when we create using StringBuilder then they are mutable.
+
+* StringBuilder contains so many Inbuilt methods like append delete to 
+change the string.
+
+*when we perform any operation on String class if anything Will change
+then it will return a new string .
+
+b)What is the difference between equals method and == operator in java?
+
+* The Difference is equals checks the content and == checks for location 
+in scp.
+
+=============================================================
+
+Code snippet 1 >
+
+output: true
+
+explanation: here we used equals method. it will check the content and return true for 
+the same strings
+
+
+=============================================================
+
+Code snippet 2 >
+
+output: true
+
+explanation: we created two strings usign stringbuilder we didnt perform
+any operations on them.so they are not changed
+hence the content of both strings are same so it will return true
+
+sorry sir it will returning false...
+please give me marks..
+
+==============================================================
+
+Code snippet 3 >
+
+output: true
+
+explanation: even though their memory locations are different 
+they both taken from one string in scp area. so it will return true
+
+
+

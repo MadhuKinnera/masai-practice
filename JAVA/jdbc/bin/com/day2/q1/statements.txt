@@ -1,0 +1,32 @@
+Difference between statement and prepared statement
+----------------------------------------------------
+
+
+Statement
+---------
+using this we can create a sql statement which will excuted by db engine
+
+every time we run the program the statement will do 
+
+1. query compilation
+
+2. query plan recognisation
+
+3. query optimisation
+
+
+there is a chance for sql injection
+
+
+
+
+PreparedStatement
+-----------------
+
+using this also we can create sql statement which is excuted by db engine
+
+
+this will comile only once
+
+
+there is no chance for sql injection

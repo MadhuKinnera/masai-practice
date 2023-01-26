@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+
+
+
+#cartpage{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:30px;
+        }
+        h2{
+          padding-right:100px;
+          color:red;
+        }
+
+        img{
+            
+            width:70%;
+
+        }
+        h1{
+             width:80%;
+            text-align: left;
+        }
+
+        h3{
+            color:red;
+            padding-left:30px;
+        }
+
+        button{
+          padding:5px;
+          border-radius: 5px;
+          border-color:transparent;
+          background-color:orange;
+        }
+        button:hover{
+          cursor: pointer;
+          background-color:blueviolet;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cartpage">
+    </div>
+</body>
+</html>
+<script>
+    cartArr=JSON.parse(localStorage.getItem("cartArr")) || [];
+    let cartpage=document.querySelector("#cartpage");
+    function display(arr){
+        arr.forEach(function(ele){
+            let div=document.createElement("div");
+            let img=document.createElement("img");
+            let name=document.createElement("h1");
+            let catagory=document.createElement("p");
+            let price=document.createElement("h3");
+            let del=document.createElement("button");
+
+            img.src=ele.img;
+            name.innerText=ele.name;
+            catagory.innerText=ele.catagory;
+            price.innerText=ele.price;
+            del.innerText="Remove"
+            del.addEventListener("click",function(){
+                deleteCart(ele.productID);
+            })
+
+
+
+
+
+            div.append(img,name,catagory,price,del);
+            cartpage.append(div);
+        });
+
+        function deleteCart(id){
+            cartArr=cartArr.filter(function(ele){
+                    return id!=ele.productID;
+            });
+           // cartArr=cartArr1;
+            localStorage.setItem("cartArr",JSON.stringify(cartArr));
+            setTimeout("window.location.reload(true);",100);
+        }
+    }
+
+display(cartArr)
+
+     
+</script>

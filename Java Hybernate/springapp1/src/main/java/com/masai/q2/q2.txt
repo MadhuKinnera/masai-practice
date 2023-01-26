@@ -1,0 +1,45 @@
+2) Explain about IOC and Dependency Injection.
+================================================
+
+IOC (Inversion of Control )
+----------------------------
+
+* It is a process where the objects defines their dependencies .
+
+* it is a approch to outsource creating and managing the objects 
+
+* it can be achived through the dependency injection.
+
+Dependency Injection
+---------------------
+
+* It is process of assigning values to the dependencies in dependent spring bean class.
+
+* these are 2 types
+
+1. setter injection
+
+* here setter method is used to assign the value to the dependencies in dependent.
+
+there are 3 types of values possible 
+
+1. primitives and string for this we use value attribute.
+
+2. User defined objects for this we use ref attribute to assign value
+
+3. Collections and normal array
+
+
+* setting values are optional
+
+
+2. Constructor injection
+
+* using parameterized constructor we can assign the values to the dependencies.
+
+* in the constructor injection we use constructor-arg attibute in the bean tag
+
+* using this injection circular dependency may happen it leads to an exception.
+
+* here we mandatory  to specify values of parameters of constructor
+ 

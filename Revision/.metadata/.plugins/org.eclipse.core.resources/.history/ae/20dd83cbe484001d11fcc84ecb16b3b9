@@ -1,0 +1,14 @@
+package com.masai.files;
+
+import java.util.regex.Pattern;
+
+class Main
+{
+	public static void main(String[] args) {
+		
+		System.out.println(Pattern.matches("^[0-9]{10}$","979379873493"));
+//		String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$]).{10}$";
+//		
+//		System.out.println(Pattern.matches(regex, "Madhu@aa12"));
+	}
+}

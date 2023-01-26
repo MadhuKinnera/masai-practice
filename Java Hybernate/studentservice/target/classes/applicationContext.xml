@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="student1" class="com.masai.Student">
+<constructor-arg value="10"/>
+<constructor-arg value="Bivek"/>
+<constructor-arg value="909"/>
+</bean>
+<bean id="student2" class="com.masai.Student">
+<constructor-arg value="12"/>
+<constructor-arg value="Ram"/>
+<constructor-arg value="870"/>
+</bean>
+<bean id="student3" class="com.masai.Student">
+<constructor-arg value="14"/>
+<constructor-arg value="Madhu"/>
+<constructor-arg value="650"/>
+</bean>
+<bean id="student4" class="com.masai.Student">
+<constructor-arg value="18"/>
+<constructor-arg value="Rajesh"/>
+<constructor-arg value="370"/>
+</bean>
+<bean id="student5" class="com.masai.Student">
+<constructor-arg value="16"/>
+<constructor-arg value="Pavan"/>
+<constructor-arg value="850"/>
+</bean>
+
+<bean id="course1" class="com.masai.Course">
+<constructor-arg value="100"/>
+<constructor-arg value="java"/>
+<constructor-arg value="9000"/>
+</bean>
+<bean id="course2" class="com.masai.Course">
+<constructor-arg value="200"/>
+<constructor-arg value="dbms"/>
+<constructor-arg value="6000"/>
+</bean>
+<bean id="course3" class="com.masai.Course">
+<constructor-arg value="300"/>
+<constructor-arg value="spring"/>
+<constructor-arg value="7000"/>
+</bean>
+
+<bean id="ss" class="com.masai.StudentService">
+<property name="appName" value="Student Service Bolthe "/>
+
+</bean>
+
+
+
+</beans>

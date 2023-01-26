@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike O shop</title>
+    <style>
+        
+        #nav{
+            width:100%;
+            height:70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 20px -5px;
+            margin-bottom: 25px;
+        }
+
+        #nav > div:first-child{
+            font-size:25px;
+            color:blueviolet;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+
+        #nav > div:nth-child(2){
+            font-size: large;
+            color:rgb(22, 144, 115);
+        }
+        #products{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,480px);
+            gap:20px;
+        }
+        #products > div {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: rgba(255, 228, 196, 0.418);
+        }
+
+        #products > div > img{
+            width:100%;
+        }
+        #products > div > p{
+          text-align: center;
+          margin:15px 0px;
+          
+        }
+
+        #products > div > p:nth-child(2){
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #products > div > p:nth-child(3){
+            font-size: xx-large;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #products > div > p:nth-child(4){
+            font-weight: bolder;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #products > div > p:nth-child(5){
+            font-size:20px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+     <div>Bike O Shop</div>
+     <div>Enjoy Shopping..!</div>
+    </div>
+
+    <div id="products">
+        <div>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fbajaj%2Fpulsar-n160%2Fbajaj-pulsar-n160.jpg%3Fv%3D2&w=1920&q=75" alt="">
+            <p>BAJAJ</p>
+            <p>Bajaj Pulsar</p>
+            <p>N160</p>
+            <p>Rs. 1,22,854</p>
+        </div>
+        <div>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fsuzuki%2Fv-strom-sx-250%2Fsuzuki-v-strom-sx-250.jpg%3Fv%3D9&w=1920&q=75" alt="">
+            <p>SUZIKI</p>
+            <p>V-STROM</p>
+            <p>SX 250</p>
+            <p>Rs.2,12,000</p>
+        </div>
+        <div>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Ftriumph%2Ftiger-sport-660%2Ftriumph-tiger-sport-660.jpg%3Fv%3D11&w=1920&q=75" alt="">
+            <p>TRIUMPH</p>
+            <p>Tiger Sport</p>
+            <p>660</p>
+            <p>Rs.8,95,000</p>
+        </div>
+        <div>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Froyal-enfield%2Fscram-411%2Froyal-enfield-scram-411.jpg%3Fv%3D15&w=1920&q=75" alt="">
+            <p>ROYAL ENFIELD</p>
+            <p>Royal Enfield Scram</p>
+            <p>411</p>
+            <p>Rs.2,03,000</p>
+        </div>
+        <div>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fyezdi%2Fscrambler%2Fyezdi-scrambler.jpg%3Fv%3D12&w=1920&q=75" alt="">
+            <p>YEZDI</p>
+            <p>Yezdi Scrambler</p>
+            <p>Scrambler</p>
+            <p>Rs.2,05,000</p>
+        </div>
+        <div>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fbenelli%2Ftrk-251%2Fbenelli-trk-251.jpg%3Fv%3D5&w=1080&q=75" alt="">
+            <p>BENELLI</p>
+            <p>Benelli TRK</p>
+            <p>251</p>
+            <p>Rs.2,51,000</p>
+        </div>
+        <div>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Fbig%2Fkawasaki%2Fz650rs%2Fkawasaki-z650rs.jpg%3Fv%3D13&w=1080&q=75" alt="">
+            <p>KAWASAKI</p>
+            <p>BKawasaki Z650RS</p>
+            <p>Z650RS</p>
+            <p>Rs.6,72,000</p>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,15 @@
+package com.masai.day6.q4;
+
+public class LowBalanceException extends Exception{
+	
+	public LowBalanceException() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public LowBalanceException(String msg) {
+		super(msg);
+	}
+	
+	
+
+}

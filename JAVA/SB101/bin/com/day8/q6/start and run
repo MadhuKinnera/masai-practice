@@ -1,0 +1,13 @@
+If we run run method instead of start method 
+
+it will go to the thread and excute the code present there and then 
+the main thread will excute 
+
+we can run a thread multiple times 
+
+but we can not start a thread more than 1 time
+
+We also run the thread after starting or before startig the thread
+
+and the priority of the thread which called run is same as parent ..
+

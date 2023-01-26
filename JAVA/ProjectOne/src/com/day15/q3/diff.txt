@@ -1,0 +1,19 @@
+Difference between equals and hashCode method
+
+equals
+------
+1. This method belongs to Object class 
+2. There are so many overloaded methods present on equals method
+3. In Case of Strings it will check the content.
+4. It will return a boolean value
+5. While creation of objects in Set we need to override this method
+    manually
+    
+    
+ 
+hashCode
+--------
+1. This method also belongs to Object class
+2. It will return an int value of a object
+3. we also able to create a hash using Objects.hash() method
+4. we also able to create  hash using any primary key present in object

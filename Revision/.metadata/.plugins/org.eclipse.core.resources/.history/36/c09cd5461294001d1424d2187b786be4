@@ -1,0 +1,24 @@
+package com.madhu;
+
+import java.util.Properties;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		String from  = "kinneramadhu123";
+		String to  = "hollypoter5";
+		String subject  = "Sending Using Java";
+		String text  = "Iam sending this email using Java Application";
+		
+		Properties props = new Properties();
+		
+		props.put("mail.smtp.auth","true");
+		props.put("mail.smtp.starttls.enable", "true");
+	    props.put("mail.smtp.port", "587");
+	    props.put("smtp.host","smtp.gmail.com");
+	    
+	   
+	}
+
+}

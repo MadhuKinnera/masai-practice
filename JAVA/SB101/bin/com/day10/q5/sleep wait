@@ -1,0 +1,34 @@
+Difference between sleep and wait
+----------------------------------
+
+Sleep()
+-------
+* Sleep is a static method present in Thread class
+
+* sleep has 2 overloaded methods 
+ 1. sleep(long ms )
+ 2. sleep(long ms ,int nanos)
+
+
+* it has a time limit
+
+* it will does not release the lock during synchronization
+
+* 
+
+
+
+wait()
+-------
+* wait is non-static method present in object class
+
+* it has 3 overloaded methods
+
+ 1. wait();
+ 2. wait(long ms);
+ 3. wait(long ms,int nanos);
+* wait will wait until it will notified by notify() or notifyAll()
+
+* it will release the lock during synchronization
+
+*

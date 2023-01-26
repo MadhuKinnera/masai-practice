@@ -1,0 +1,158 @@
+SQL Queries 
+----------
+
+
+//creating department table
+
+    mysql> create table department(
+    -> did int primary key,
+    -> dname varchar(12) not null,
+    -> location varchar(12) not null
+    -> );
+    
+    
+    
+    
+    //creating employee table with one to many relationship
+    
+    
+    mysql> create table employee(
+    -> empid int primary key,
+    -> ename varchar(12) not null,
+    -> address varchar(12) not null,
+    -> mobile varchar(12) not null,
+    -> salary int not null,
+    -> deptid int,
+    -> foreign key(deptid) references department(did)
+    -> );
+    
+    
+    
+    //inserting 4 department details 
+    
+    
+    mysql> insert into department values(10,'account','pune');
+    Query OK, 1 row affected (0.01 sec)
+    mysql> insert into department values(12,'sales','mumbai');
+   Query OK, 1 row affected (0.00 sec)
+
+   mysql> insert into department values(13,'marketing','chennai');
+    Query OK, 1 row affected (0.00 sec)
+
+   mysql> insert into department values(14,'hr','hyderabad');
+   Query OK, 1 row affected (0.00 sec)
+   
+   
+   
+   
+   //inserting employee details 
+   
+   mysql> insert into employee values(1,'pavan','warangal','4224354353',
+    -> 80000,10);
+   Query OK, 1 row affected (0.01 sec)
+   mysql> insert into employee values(2,'ramesh','nalgonda','4242364666',70000,10);
+   Query OK, 1 row affected (0.00 sec)
+
+    mysql> insert into employee values(3,'ravi','hanmakonda','989988366',60000,12);
+    Query OK, 1 row affected (0.00 sec)
+
+    mysql> insert into employee values(4,'rahul','polaram','989984336',67000,12);
+    Query OK, 1 row affected (0.00 sec)
+
+   mysql> insert into employee values(5,'mukesh','gangaram','989984339',63000,12);
+   Query OK, 1 row affected (0.00 sec)
+   mysql> insert into employee values(6,'madhu','gudur','989923111',83000,13);
+   Query OK, 1 row affected (0.00 sec)
+
+   mysql> insert into employee values(7,'prasad','mahabad','989953511',82000,13);
+   Query OK, 1 row affected (0.00 sec)
+
+   mysql> insert into employee values(8,'ramu','karimnagar','98959000',92000,14);
+   Query OK, 1 row affected (0.00 sec)
+
+    mysql> insert into employee values(9,'raghu','medak','989533210',99000,14);
+    Query OK, 1 row affected (0.00 sec)
+   
+   
+   mysql> select * from employee;
++-------+--------+------------+------------+--------+--------+
+| empid | ename  | address    | mobile     | salary | deptid |
++-------+--------+------------+------------+--------+--------+
+|     1 | pavan  | warangal   | 4224354353 |  80000 |     10 |
+|     2 | ramesh | nalgonda   | 4242364666 |  70000 |     10 |
+|     3 | ravi   | hanmakonda | 989988366  |  60000 |     12 |
+|     4 | rahul  | polaram    | 989984336  |  67000 |     12 |
+|     5 | mukesh | gangaram   | 989984339  |  63000 |     12 |
+|     6 | madhu  | gudur      | 989923111  |  83000 |     13 |
+|     7 | prasad | mahabad    | 989953511  |  82000 |     13 |
+|     8 | ramu   | karimnagar | 98959000   |  92000 |     14 |
+|     9 | raghu  | medak      | 989533210  |  99000 |     14 |
++-------+--------+------------+------------+--------+--------+
+9 rows in set (0.00 sec)
+
+
+
+
+//total salary group by department;
+
+mysql> select deptid , sum(salary) total from employee group by deptid;
++--------+--------+
+| deptid | total  |
++--------+--------+
+|     10 | 150000 |
+|     12 | 190000 |
+|     13 | 165000 |
+|     14 | 191000 |
++--------+--------+
+4 rows in set (0.00 sec)
+
+
+
+
+//employee details  who are in sales depatment
+
+mysql> select * from employee where deptid= (select did from department where dname='sales');
++-------+--------+------------+-----------+--------+--------+
+| empid | ename  | address    | mobile    | salary | deptid |
++-------+--------+------------+-----------+--------+--------+
+|     3 | ravi   | hanmakonda | 989988366 |  60000 |     12 |
+|     4 | rahul  | polaram    | 989984336 |  67000 |     12 |
+|     5 | mukesh | gangaram   | 989984339 |  63000 |     12 |
++-------+--------+------------+-----------+--------+--------+
+3 rows in set (0.01 s
+
+
+
+
+// department details by an employee id
+
+mysql> select * from department where did=(select deptid from employee where empid=8);
++-----+-------+-----------+
+| did | dname | location  |
++-----+-------+-----------+
+|  14 | hr    | hyderabad |
++-----+-------+-----------+
+1 row in set (0.00 sec)
+
+
+
+
+//second highest salary from employee table
+
+mysql> select ename , salary from employee where salary = (select max(salary) from employee where salary<(select max(salary) from employee ));
++-------+--------+
+| ename | salary |
++-------+--------+
+| ramu  |  92000 |
++-------+--------+
+1 row in set (0.00 sec)
+
+
+
+
+
+   
+   
+   
+   
+   

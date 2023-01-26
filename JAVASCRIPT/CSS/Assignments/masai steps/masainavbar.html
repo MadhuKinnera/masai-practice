@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Navbar</title>
+
+<style>
+
+#navbar{
+    height:60px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+
+#navbar > div:first-child {
+    width: 10%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar > div:nth-child(2) {
+    width: 70%;
+    height: 100%;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#navbar > div:first-child > img {
+    width: 80%;
+}
+
+#navbar > div:nth-child(2) > div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar > div:nth-child(2) > div > img {
+    width:10%;
+   padding-left:10px;
+}
+#navbar > div:nth-child(2) > div{
+    color:#8990d4;
+    background-color:#f2fdff;
+    border-radius: 3px;
+}
+
+
+select {
+    border:none;
+    text-transform: uppercase;
+}
+
+button{
+    text-transform: uppercase;
+    color:red;
+    padding:15px;
+    background-color: white;
+    border:1px solid red;
+    border-radius:4px;
+}
+
+
+</style>
+
+
+
+
+</head>
+<body>
+    <div id="navbar">
+          <div>
+            <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="masai-logo">
+          </div>
+          <div>
+              <select>
+                  <option value="course">Courses</option>
+                  <option value="fsd">FSD</option>
+                  <option value="ad">ANDROID DEV</option>
+                  <option value="da">DATA ANALYTICS</option>
+              </select>
+              <p>fees & isa</p>
+              <p>about us</p>
+              <p>hire from us</p>
+              <p>faq</p>
+              <p>events</p>
+
+                 <div>
+                    <p>refer and earn</p>
+                    <img src="https://www.masaischool.com/img/referral/hand.png">
+                 </div>
+                 <button>login</button>
+          </div>
+    </div>
+</body>
+</html>

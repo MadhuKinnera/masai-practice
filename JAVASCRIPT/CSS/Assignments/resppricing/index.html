@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing</title>
+    <style>
+#heading {
+  text-align: center;
+  width:30%;
+  margin:auto;
+
+}
+#heading > p {
+  line-height: 25px;
+}
+
+#cards-section{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:auto;
+    gap:20px;
+
+}
+
+#cards-section h2{
+  text-align: center;
+}
+
+#cards-section >div:first-child > h1{
+  text-align: center;
+  color:green;
+}
+#cards-section > div:nth-child(2) > h1 {
+  text-align:center;
+  color:orange;
+}
+#cards-section > div:last-child > h1 {
+  text-align:center;
+  color:blue;
+}
+#cards-section h1+p{
+  text-align: center;
+  font-style: italic;
+}
+#cards-section p+p{
+  text-align: center;
+  width:60%;
+  margin:auto;
+}
+
+#cards-section button{
+  display: block;
+  margin:auto;
+  height:30px;
+  width:100px;
+  border-radius: 8px;
+  border:1px solid blue;
+background-color:white;
+font-weight: bolder;
+color:blue;
+margin-top:50px;
+}
+
+@media all and (min-width:720px) and (max-width:1080px){
+    #cards-section{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:auto auto;
+    }
+    #heading{
+        width:70%;
+    }
+}
+
+@media all and (min-width:320px) and (max-width:720px) {
+    #cards-section{
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto;
+    }
+    #heading{
+        width:90%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="heading">
+        <h1>Choose a plan that right for your business</h1>
+        <p>
+          We collect reviews from our users so you can get an honest opinion of
+          what an experience with our website are really like!
+        </p>
+      </div>
+  
+      <!-- Cards section -->
+      <div id="cards-section">
+        <!-- This section should contain 3 children divs, each div should have h2,h1,p,p,button -->
+  
+  <div>
+    <h2>Starter Plan</h2>
+    <h1>Free</h1>
+    <p>per month</p>
+    <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website</p>
+    <button>Start Now</button>
+  </div>
+  <div>
+  
+    <h2>Starter Plan</h2>
+    <h1>$39.00</h1>
+    <p>per month</p>
+    <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website</p>
+    <button>Start Now</button>
+  
+  </div>
+  <div>
+  
+    <h2>Starter Plan</h2>
+    <h1>$59.00</h1>
+    <p>per month</p>
+    <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website</p>
+    <button>Start Now</button>
+  
+  </div>
+  
+      </div>
+</body>
+</html>

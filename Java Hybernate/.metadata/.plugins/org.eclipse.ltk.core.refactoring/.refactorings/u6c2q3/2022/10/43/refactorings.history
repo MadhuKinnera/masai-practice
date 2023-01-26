@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;TeacherException.java&apos; to &apos;com.exception.CourseException.java&apos;&#x0D;&#x0A;- Original project: &apos;u6c2q3&apos;&#x0D;&#x0A;- Destination element: &apos;com.exception.CourseException.java&apos;&#x0D;&#x0A;- Original element: &apos;com.doa.TeacherException.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.exception{CourseException.java" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.doa{TeacherException.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1666005700981" units="1" version="1.0"/>
+</session>

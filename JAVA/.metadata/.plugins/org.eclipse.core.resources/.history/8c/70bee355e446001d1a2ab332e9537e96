@@ -1,0 +1,40 @@
+ackage com.evaluation;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 64;
+		int b = 70;
+		byte c =(byte)(a+b); // type cast (a+b) to byte
+		System.out.println(c);
+
+	}
+
+}
+//EXPLAINING THE OUTPUT
+/*
+1. here we a+b are integers and we need to store in a smaller datatype so
+we need to typecast explicitly
+2. the a+b will give integer as result to we need to typecast that into
+byte to store the result in byte.
+3. the size of byte datatype is 1byte .Hence the range is 
+from -128 to 127;
+4. the a+b will give 134 as results .but that is not present in byte range
+so it will reiterate through range 
+example: integer 128 is not in byte instead of that in the byte range 
+cycle there is -128 present next to 127
+5. so here 134 have the value 7 extra to its positive range so it will go 
+backwards from 128 and it will reach -122.
+example-
+ 127 127
+ 128 -128
+ 129 -127
+ 130 -126
+ 131 -125
+ 132 -124
+ 133 -123
+ 134 -122..
+ 
+         
+*/

@@ -1,0 +1,17 @@
+Difference between Thread class and Runnable interface to create a thread is
+
+Thread class
+------------
+
+* Inheritance is closed due to extending the Thread class
+
+* if we didnt override run method no output produced
+
+Runnable Interface
+------------------
+
+* We can inherit another class
+
+* we definetily need to override run method
+
+* we need to create object for Thread seperately

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 2</title>
+    <style>
+#container{
+    width:40%;
+    margin:auto;
+    display:grid;
+    gap:10px;
+    grid-template-areas: 
+    "a a b e "
+    "c d b e";
+    
+    
+}
+#container > div {
+     border:1px solid blue;
+     font-size:20px;
+     padding:15px;
+     display:flex;
+     background-color:#444444;
+     border-radius:8px;
+     text-transform: uppercase;
+     color:white;
+}
+
+#container > div:first-child{
+    grid-area:a;
+}
+#container > div:nth-child(2){
+    grid-area:b;
+}
+#container > div:nth-child(3){
+    grid-area:c;
+}
+#container > div:nth-child(4){
+    grid-area:d;
+}
+#container > div:nth-child(5){
+    grid-area:e;
+}
+
+
+
+
+    </style>
+</head>
+
+
+
+
+
+<body>
+    <div id="container">
+           <div>a</div>
+           <div>b</div>
+           <div>c</div>
+           <div>d</div>
+           <div>e</div>
+    </div>
+</body>
+</html>

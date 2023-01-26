@@ -1,0 +1,32 @@
+upperCase - select + ctrl + shift + X 
+
+loweCase - select + ctrl + shift + Y
+
+move line up/down - Alt + up or down arrow
+
+format the code - ctrl + shift + F
+
+optimize imports - ctrl + shift + o
+
+rename everywhere - select the word + alt + shift + R
+
+delete a row - ctrl + D
+
+where brackets ends/start - ctrl + shift + p
+
+search java class - ctrl + shift + R
+
+switch files - ctrl + up / down 
+
+to run - ctrl + f11
+
+to see shortcuts - ctrl + shift + L
+
+
+
+
+
+
+
+
+

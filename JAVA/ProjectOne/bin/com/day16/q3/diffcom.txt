@@ -1,0 +1,16 @@
+The Difference between Comparable Interface  and Comparator Interface 
+
+Comparable
+----------
+1. it is belongs to java.lang package 
+2. The object class needs to implements this Interface
+3. Only one type of sorting possible 
+4. Need to touch the object class
+
+
+Comparator
+----------
+1. it is belongs to java.util package 
+2. Any class can be implements this Interface
+3. Many ways of sorting is possible 
+4. no need to touch the object class

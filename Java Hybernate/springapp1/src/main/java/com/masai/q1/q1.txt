@@ -1,0 +1,24 @@
+What is a Spring Bean and Spring container?
+===========================================
+
+* A normal java class register with spring container software is called spring bean..
+
+* It is also a pojo class(plain old java object )
+
+* Spring container is a pure java class which is control all the spring bean classes.
+
+* It is Not a external container so we need not to install any software.
+
+* Using this container we get the fuctionalities to the spring bean classes.
+
+* ApplicationContext is a advanced container for spring framework software.
+
+
+ How to activate the Spring Container in our application.
+ ========================================================
+ 
+ * To activate spring container we need to create a xml file with any name
+  inside main/resources folder
+ 
+ * we need to configure which are the spring bean and
+  what are the properites of the dependencies.

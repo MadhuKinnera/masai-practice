@@ -1,0 +1,61 @@
+Race condition
+-------------
+ * If two are more threads using the same variable or resources then there is 
+ chance for data inconsistency 
+ 
+ * Due to this Data or the output of the program may wrong..
+ 
+ *Ex
+ ---
+ 
+ a varable shared is common for both the threads
+ 
+ shared =10;
+ 
+ one thread is excuting x++
+ and other is y--;
+ 
+ //
+ thread1 func
+ 
+ int x = shared
+ 
+ x++;
+ 
+ sleep(1000);
+ 
+ shared =x;
+ 
+ ===========
+ 
+ thread2 func
+ 
+ int y= shared
+ 
+ y--;
+ 
+ sleep(1000);
+ 
+ shared =y;
+ 
+
+ If Thread Scedular gives chance for thread1 then the value of shared is 
+ The value become the shared = 11
+ 
+ If Thread schedular gives chance for thread2 then the value of shared is 
+ The value become shared=9;
+ 
+ 
+ but here we are doing one increment and one decrement 
+ we need the output balaced the intial output
+ 
+ but here both the threads are in a race to who excutes first
+ 
+ due to that race condition arises.
+ 
+ We can solve race condition using Thread Synchronisation
+ 
+ using semaphore like
+ 1. Binary Semaphore
+ 2. Counting Semaphore
+ 

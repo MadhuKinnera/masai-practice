@@ -1,0 +1,8 @@
+1. Difference between TreeSet,TreeMap,PriorityQueue
+2. can we return anything while overriding other than the same one in parent class ?
+3. if i do Thread t1 = new Thead() means the thread created ? 
+4. what are the producer, cosumer , predicate, and function ?
+5. create a thread using java8 features
+6. List<Integer> list = List.of(2,3,8,10,1,3);
+   
+print the list using method reference

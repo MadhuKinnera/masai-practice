@@ -1,0 +1,14 @@
+Difference between class lock and object lock
+----------------------------------------------
+
+1. A class contains one lock which is represents the static synchronised methods.
+
+2. An object can also one lock but we can have n number of objs the one class
+
+3. For a class one class level key and any number of object keys available
+
+
+4. The threads created on a same object has no permision to excute the sync methods
+until another same obj thread excutes it.
+
+5. While a static sync is excuting no other static syncs are allowed to excute.

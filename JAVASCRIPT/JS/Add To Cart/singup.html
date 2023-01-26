@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        #container{
+            width:30%;
+            margin:auto;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px;
+            height:300px;
+            
+        }
+        h1{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input,button{
+            display: block;
+            margin:auto;
+            margin-bottom: 20px;
+            border-radius:5px;
+            padding:5px 10px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: lightgreen;
+        }
+        button{
+            background-color: green;
+            border-color:transparent;
+            color:white;
+            
+        }
+        p{
+            text-align:center;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <h1>Sign Up</h1>
+            <input type="text" id="name" placeholder="Enter Name">
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button>Sign Up</button>
+            <p> <a href="signin.html">Sign In Here</a> </p>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+
+    let submit=document.querySelector("button");
+    let signUpData=JSON.parse(localStorage.getItem("signUpData")) || [] ;
+    submit.addEventListener("click",submitFunc)
+    
+
+    function submitFunc(event)
+    {
+    event.preventDefault();
+    let name=document.querySelector("#name").value;
+    let email=document.querySelector("#email").value;
+    let password=document.querySelector("#password").value;
+   let obj={
+        Name:name,
+        Email:email,
+        Password:password
+    }
+    signUpData.push(obj);
+    localStorage.setItem("signUpData",JSON.stringify(signUpData));
+    }
+   
+</script>

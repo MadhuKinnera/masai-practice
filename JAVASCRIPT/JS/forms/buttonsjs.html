@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Buttons</title>
+    <style>
+        #container{
+            width:60%;
+            margin:auto;
+            height:90px;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #container > div {
+            padding:5px 10px;
+            border-radius:5px;
+        }
+        #div1{
+              background-color: #2699fb;
+              color:white;
+        }
+        #div2{
+           background-color:#6c757d;
+           color:white;
+        }
+        #div3{
+           background-color:#75ba75 ;
+           color:white;
+        }
+        #div4{
+           background-color: #dc3445;
+           color:white;
+        }
+        #div5{
+           background-color:#ffc007 ;
+        }
+        #div6{
+           background-color:#018080 ;
+           color:white;
+        }
+        #div7{
+           background-color:white ;
+        }
+        #div8{
+           background-color:#444444 ;
+           color:white;
+        }
+        #div9{
+           background-color:white;
+           color:
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let main=document.createElement("div");
+    main.setAttribute("id","container");
+    document.querySelector("body").append(main);
+    
+   let div1=document.createElement("div");
+   div1.setAttribute("id","div1");
+   div1.innerText="primary";
+   document.querySelector("#container").append(div1);
+
+   let div2=document.createElement("div");
+   div2.setAttribute("id","div2");
+   div2.innerText="Secondary";
+   document.querySelector("#container").append(div2);
+
+  let div3=document.createElement("div")
+  div3.setAttribute("id","div3");
+  div3.innerText="Success";
+  document.querySelector("#container").append(div3);
+   
+  let div4=document.createElement("div");
+  div4.setAttribute("id","div4");
+  div4.innerText="Danger";
+  document.querySelector("#container").append(div4);
+
+  let div5=document.createElement("div");
+  div5.setAttribute("id","div5");
+  div5.innerText="Warning";
+  document.querySelector("#container").append(div5);
+
+  let div6=document.createElement("div");
+  div6.setAttribute("id","div6");
+  div6.innerText="Info";
+  document.querySelector("#container").append(div6);
+
+  let div7=document.createElement("div");
+  div7.setAttribute("id","div7");
+  div7.innerText="Light";
+  document.querySelector("#container").append(div7);
+
+  let div8=document.createElement("div");
+  div8.setAttribute("id","div8");
+  div8.innerText="Dark";
+  document.querySelector("#container").append(div8);
+
+  let div9=document.createElement("div");
+  div9.setAttribute("id","div9");
+  div9.innerText="Link";
+  document.querySelector("#container").append(div9);
+
+</script>

@@ -1,0 +1,741 @@
+3Q
+--
+a)
+mysql> update programmer set projid='nitts' where lastname='gupta';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update programmer set language = 'c++' where lastname='gupta';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from programmer;
++-------+-----------+-----------+------------+--------+----------+--------+--------------+
+| empno | lastname  | firstname | hiredate   | projid | language | taskno | privilege    |
++-------+-----------+-----------+------------+--------+----------+--------+--------------+
+|   201 | gupta     | saurav    | 1995-01-01 | nitts  | c++      |     52 | secret       |
+|   390 | ghosh     | pinky     | 1993-05-01 | kcw    | java     |     11 | Topsecret    |
+|   789 | agarwal   | praveen   | 1998-03-08 | rnc    | vb       |     11 | secret       |
+|   134 | chaudhury | supriyo   | 1995-07-15 | tipps  | c++      |     52 | secret       |
+|   896 | jha       | ranjit    | 1997-06-15 | kcw    | java     |     19 | Topsecret    |
+|   345 | john      | peter     | 1999-11-15 | tipps  | java     |     52 | NULL         |
+|   563 | anderson  | andy      | 1994-08-15 | nitts  | c++      |     89 | confidential |
++-------+-----------+-----------+------------+--------+----------+--------+--------------+
+7 rows in set (0.00 sec)
+
+3b)
+
+mysql> delete  from programmer where firstname='supriyo';
+Query OK, 1 row affected (0.01 sec)
+
+
+
+3c)
+
+mysql> alter table programmer drop column taskno;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+4)
+
+mysql> create table department(
+    -> deptno int unique,
+    -> dname varchar(20) not null,
+    -> loc varchar(20) not null
+    -> );
+
+5)
+
+mysql> alter table department modify dname varchar(50);
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+6)
+
+mysql> insert into department values(10,'accounts','newyork');
+mysql> insert into department values(30,'sales','atlanta');
+mysql> insert into department values(40,'research','ohio');
+
+7)
+
+mysql> create table employee(
+    -> empno int primary key,
+    -> ename varchar(20) not null,
+    -> job varchar(20) not null,
+    -> sal int not null,
+    -> hiredate date not null,
+    -> deptno int not null,
+    -> foreign key(deptno) references department(deptno)
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+
+
+8)
+
+mysql> insert into employee values(7001,'james','clerk',3000,'05-05-06',10);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(7002,'mason','president',10000,'05-06-06',20);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values(7003,'clark','manager',5000,'04-05-06',20);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values(7004,'jhon','manager',6000,'05-08-06',10);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(7005,'black','clerk',3500,'05-09-06',30);
+Query OK, 1 row affected (0.01 sec)
+
+9)
+
+mysql> alter table employee add mgr varchar(4);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+10)
+
+
+mysql> create table grade(
+    -> gradeno int primary key,
+    -> hi_sal int not null,
+    -> lo_sal int not null
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+11)
+
+mysql> alter table grade drop column lo_sal;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+12)
+
+mysql> alter table grade add column low_sal int not null;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+13)
+
+mysql> insert into grade values(1,2000,500);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into grade values(2,3500,2100);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into grade values(3,6000,3600);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into grade values(4,15000,6100);
+Query OK, 1 row affected (0.01 sec)
+
+14)
+
+mysql> create table employee_back as select * from employee;
+Query OK, 5 rows affected (0.03 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+15)
+
+mysql> update employee set sal=3500 where ename=
+    -> 'james';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+16)
+
+mysql> update employee set sal=sal+1000 where job='manager';
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+
+17)
+
+mysql> update employee set sal=sal-100 where deptno=10;
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+18)
+
+mysql> alter table employee add column comm varchar(20);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+19)
+
+mysql> update employee set comm=0;
+Query OK, 5 rows affected (0.01 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+20)
+
+mysql> delete from employee where hiredate<'2005-06-06';
+Query OK, 2 rows affected (0.01 sec)
+
+21)
+
+mysql> delete from employee where sal<3000;
+Query OK, 0 rows affected (0.00 sec)
+
+22)
+mysql> select * from employee where deptno=10;
++-------+-------+---------+------+------------+--------+------+------+
+| empno | ename | job     | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+---------+------+------------+--------+------+------+
+|  7004 | jhon  | manager | 6900 | 2005-08-06 |     10 | NULL |    0 |
++-------+-------+---------+------+------------+--------+------+------+
+1 row in set (0.00 s
+
+23)
+
+mysql> select * from employee where deptno=10 and job='manager';
++-------+-------+---------+------+------------+--------+------+------+
+| empno | ename | job     | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+---------+------+------------+--------+------+------+
+|  7004 | jhon  | manager | 6900 | 2005-08-06 |     10 | NULL |    0 |
++-------+-------+---------+------+------------+--------+------+------+
+1 row in set (0.00 sec)
+
+24)
+
+mysql> select  * from employee where sal between 3000 and 5000;
++-------+-------+-------+------+------------+--------+------+------+
+| empno | ename | job   | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+-------+------+------------+--------+------+------+
+|  7005 | black | clerk | 3500 | 2005-09-06 |     30 | NULL |    0 |
++-------+-------+-------+------+------------+--------+------+------+
+1 row in set (0.00 sec)
+
+25)
+
+
+mysql> select * from employee where hiredate> '2005-07-10';
++-------+-------+---------+------+------------+--------+------+------+
+| empno | ename | job     | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+---------+------+------------+--------+------+------+
+|  7004 | jhon  | manager | 6900 | 2005-08-06 |     10 | NULL |    0 |
+|  7005 | black | clerk   | 3500 | 2005-09-06 |     30 | NULL |    0 |
++-------+-------+---------+------+------------+--------+------+------+
+2 rows in set (0.00 sec)
+
+26)
+
+mysql> select * from employee where job='president' or job='manager';
++-------+-------+-----------+-------+------------+--------+------+------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7002 | mason | president | 10000 | 2005-06-06 |     20 | NULL |    0 |
+|  7004 | jhon  | manager   |  6900 | 2005-08-06 |     10 | NULL |    0 |
++-------+-------+-----------+-------+------------+--------+------+------+
+2 rows in set (0.00 sec)
+
+27)
+
+mysql> select * from employee where (deptno=10 or deptno=20 ) and job='manager';
++-------+-------+---------+------+------------+--------+------+------+
+| empno | ename | job     | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+---------+------+------------+--------+------+------+
+|  7004 | jhon  | manager | 6900 | 2005-08-06 |     10 | NULL |    0 |
++-------+-------+---------+------+------------+--------+------+------+
+1 row in set (0.00 sec)
+
+28)
+
+mysql> update employee set comm=500 where deptno=10;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+29)
+
+mysql> select * from employee where comm=null;
+Empty set (0.00 sec)
+
+
+30)
+
+mysql> select * from employee where job!='president' and job!='manager';
++-------+-------+-------+------+------------+--------+------+------+
+| empno | ename | job   | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+-------+------+------------+--------+------+------+
+|  7005 | black | clerk | 3500 | 2005-09-06 |     30 | NULL |    0 |
++-------+-------+-------+------+------------+--------+------+------+
+1 row in set (0.00 sec)
+
+31)
+
+mysql> select * from employee where ename like 'j%';
++-------+-------+---------+------+------------+--------+------+------+
+| empno | ename | job     | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+---------+------+------------+--------+------+------+
+|  7004 | jhon  | manager | 6900 | 2005-08-06 |     10 | NULL |  500 |
++-------+-------+---------+------+------------+--------+------+------+
+1 row in set (0.00 sec)
+
+32)
+
+
+mysql> select * from employee where ename like '%a%';
++-------+-------+-----------+-------+------------+--------+------+------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7002 | mason | president | 10000 | 2005-06-06 |     20 | NULL |    0 |
+|  7005 | black | clerk     |  3500 | 2005-09-06 |     30 | NULL |    0 |
++-------+-------+-----------+-------+------------+--------+------+------+
+2 rows in set (0.00 sec)
+
+
+33)
+
+mysql> select sal,comm,sal+comm bonus from employee;
++-------+------+-------+
+| sal   | comm | bonus |
++-------+------+-------+
+| 10000 |    0 | 10000 |
+|  6900 |  500 |  7400 |
+|  3500 |    0 |  3500 |
++-------+------+-------+
+3 rows in set (0.00 sec)
+
+34)
+
+
+mysql> select sal,sal+(sal*0.1) incrsal from employee where job='manager';
++------+---------+
+| sal  | incrsal |
++------+---------+
+| 6900 |  7590.0 |
++------+---------+
+1 row in set (0.00 sec)
+
+
+35)
+
+mysql> update employee set sal=sal+(sal*0.1) where job='manager';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+36)
+
+mysql> select * from employee order by ename desc;
++-------+-------+-----------+-------+------------+--------+------+------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7002 | mason | president | 10000 | 2005-06-06 |     20 | NULL |    0 |
+|  7004 | jhon  | manager   |  7590 | 2005-08-06 |     10 | NULL |  500 |
+|  7005 | black | clerk     |  3500 | 2005-09-06 |     30 | NULL |    0 |
++-------+-------+-----------+-------+------------+--------+------+------+
+3 rows in set (0.00 sec)
+
+
+37)
+
+mysql> select * from employee order by deptno,job;
++-------+-------+-----------+-------+------------+--------+------+------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7004 | jhon  | manager   |  7590 | 2005-08-06 |     10 | NULL |  500 |
+|  7002 | mason | president | 10000 | 2005-06-06 |     20 | NULL |    0 |
+|  7005 | black | clerk     |  3500 | 2005-09-06 |     30 | NULL |    0 |
++-------+-------+-----------+-------+------------+--------+------+------+
+3 rows in set (0.00 sec)
+
+38)
+
+
+mysql> select concat(upper(substring(ename,1,1)),lower(substring(ename,2))) as Name from employee;
++-------+
+| Name  |
++-------+
+| Mason |
+| Jhon  |
+| Black |
++-------+
+3 rows in set (0.00 s
+
+
+39)
+
+mysql> select lower(ename) from employee;
++--------------+
+| lower(ename) |
++--------------+
+| mason        |
+| jhon         |
+| black        |
++--------------+
+3 rows in set (0.00 sec)
+
+40)
+
+mysql> select ename ,position('a' in ename) as pos from employee;
++-------+-----+
+| ename | pos |
++-------+-----+
+| mason |   2 |
+| jhon  |   0 |
+| black |   3 |
++-------+-----+
+3 rows in set (0.00 sec)
+
+
+41)
+
+mysql> select substring(ename,-3) last3chars from employee;
++------------+
+| last3chars |
++------------+
+| son        |
+| hon        |
+| ack        |
++------------+
+3 rows in set (0.00 sec)
+
+42)
+mysql> select ename , length(ename) length from employee;
++-------+--------+
+| ename | length |
++-------+--------+
+| mason |      5 |
+| jhon  |      4 |
+| black |      5 |
++-------+--------+
+3 rows in set (0.00 sec)
+
+43)
+
+
+mysql> select now() curr_date_and_time;
++---------------------+
+| curr_date_and_time  |
++---------------------+
+| 2022-09-23 22:18:45 |
++---------------------+
+1 row in set (0.00 sec)
+
+
+
+44)
+
+mysql> select ename , date_add(hiredate,interval 5 year) as lastdate from employee;
++-------+------------+
+| ename | lastdate   |
++-------+------------+
+| mason | 2010-06-06 |
+| jhon  | 2010-08-06 |
+| black | 2010-09-06 |
++-------+------------+
+3 rows in set (0.00 sec)
+
+
+45)
+
+mysql> select extract(day from last_day(now())) as lastday;
++---------+
+| lastday |
++---------+
+|      30 |
++---------+
+1 row in set (0.00 sec)
+
+46)
+
+
+mysql> select ename , extract(day from(last_day(hiredate))) as lastday from employee;
++-------+---------+
+| ename | lastday |
++-------+---------+
+| mason |      30 |
+| jhon  |      31 |
+| black |      30 |
++-------+---------+
+3 rows in set (0.00 sec)
+
+47)
+
+mysql> select ename , hiredate, timestampdiff(month,hiredate,'2008-06-08') as months from employee;
++-------+------------+--------+
+| ename | hiredate   | months |
++-------+------------+--------+
+| mason | 2005-06-06 |     36 |
+| jhon  | 2005-08-06 |     34 |
+| black | 2005-09-06 |     33 |
++-------+------------+--------+
+3 rows in set (0.01 sec)
+
+48)
+
+
+mysql> select ename , sal ,ifnull(comm,99) comm from employee;
++-------+-------+------+
+| ename | sal   | comm |
++-------+-------+------+
+| mason | 10000 |   99 |
+| jhon  |  7590 |  500 |
+| black |  3500 |   99 |
++-------+-------+------+
+3 rows in set (0.00 sec)
+
+49)
+
+mysql> drop table employee_back;
+Query OK, 0 rows affected (0.15 sec)
+
+50)
+
+mysql> select count(*) from employee where deptno=10;
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.01 sec)
+
+51)
+
+mysql> select deptno,count(*) from employee group by deptno;
++--------+----------+
+| deptno | count(*) |
++--------+----------+
+|     10 |        1 |
+|     20 |        1 |
+|     30 |        1 |
++--------+----------+
+3 rows in set (0.00 sec)
+
+52)
+
+
+mysql> select job,count(*) from employee group by job;
++-----------+----------+
+| job       | count(*) |
++-----------+----------+
+| president |        1 |
+| manager   |        1 |
+| clerk     |        1 |
++-----------+----------+
+3 rows in set (0.00 sec)
+
+
+53)
+
+mysql> select count(*) from employee;
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.03 sec)
+
+54)
+
+
+mysql> select max(sal) from employee;
++----------+
+| max(sal) |
++----------+
+|    10000 |
++----------+
+1 row in set (0.01 sec)
+
+
+55)
+
+mysql> select ename , max(comm) max_commission from employee;
++-------+----------------+
+| ename | max_commission |
++-------+----------------+
+| mason |            500 |
++-------+----------------+
+1 row in set (0.00 sec)
+
+56)
+
+mysql> select ename, min(sal) lowest_sal from employee;
++-------+------------+
+| ename | lowest_sal |
++-------+------------+
+| mason |       3500 |
++-------+------------+
+1 row in set (0.00 sec)
+
+57)
+
+mysql> select deptno , avg(sal) avg_sal from employee group by deptno;
++--------+------------+
+| deptno | avg_sal    |
++--------+------------+
+|     10 |  7590.0000 |
+|     20 | 10000.0000 |
+|     30 |  3500.0000 |
++--------+------------+
+3 rows in set (0.01 sec)
+
+58)
+
+
+mysql> select distinct job from employee;
++-----------+
+| job       |
++-----------+
+| president |
+| manager   |
+| clerk     |
++-----------+
+3 rows in set (0.00 sec)
+
+59)
+
+mysql> select deptno from employee where deptno in (select deptno from employee group by deptno having count(*) > 3);
+Empty set (0.00 sec)
+
+60)
+
+mysql> select deptno, sum(sal) from employee group by deptno;
++--------+----------+
+| deptno | sum(sal) |
++--------+----------+
+|     10 |     7590 |
+|     20 |    10000 |
+|     30 |     3500 |
++--------+----------+
+3 rows in set (0.00 sec)
+
+
+61)
+
+mysql> select ename , job , (if(job='president',1,if(job='manager',2,if(job='clerk',3,0))))  ranks from employee;
++-------+-----------+-------+
+| ename | job       | ranks |
++-------+-----------+-------+
+| mason | president |     1 |
+| jhon  | manager   |     2 |
+| black | clerk     |     3 |
++-------+-----------+-------+
+3 rows in set (0.00 sec)
+
+62)
+
+mysql> select job , sal  from employee group by deptno having count(*)>5;
+Empty set (0.00 sec)
+
+63)
+
++-------+----------+
+| ename | salary   |
++-------+----------+
+| mason | 5000     |
+| jhon  | 2590     |
+| black | no funds |
++-------+----------+
+3 rows in set (0.00 sec)
+
+
+64)
+
+mysql> create table employee_dup like employee;
+Query OK, 0 rows affected (0.08 sec)
+
+65)
+
+mysql> select * from employee where job=(select job from employee where job='clerk');
++-------+-------+-------+------+------------+--------+------+------+
+| empno | ename | job   | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+-------+------+------------+--------+------+------+
+|  7005 | black | clerk | 3500 | 2005-09-06 |     30 | NULL |  300 |
++-------+-------+-------+------+------------+--------+------+------+
+1 row in set (0.00 sec)
+
+66)
+
+mysql> select * from employee where sal = (select sal from employee where ename='black');
++-------+-------+-------+------+------------+--------+------+------+
+| empno | ename | job   | sal  | hiredate   | deptno | mgr  | comm |
++-------+-------+-------+------+------------+--------+------+------+
+|  7005 | black | clerk | 3500 | 2005-09-06 |     30 | NULL |  300 |
++-------+-------+-------+------+------------+--------+------+------+
+1 row in set (0.00 sec)
+
+67)
+
+mysql> select * from employee where sal > (select avg(sal) from employee);
++-------+-------+-----------+-------+------------+--------+------+------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7002 | mason | president | 10000 | 2005-06-06 |     20 | NULL |  100 |
+|  7004 | jhon  | manager   |  7590 | 2005-08-06 |     10 | NULL |  500 |
++-------+-------+-----------+-------+------------+--------+------+------+
+2 rows in set (0.00 sec)
+
+68)
+
+mysql> select * from employee e inner join department d where e.deptno= d.deptno and d.loc='newyork' or d.loc='chicago';
++-------+-------+-----------+-------+------------+--------+------+------+--------+-----------+---------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm | deptno | dname     | loc     |
++-------+-------+-----------+-------+------------+--------+------+------+--------+-----------+---------+
+|  7002 | mason | president | 10000 | 2005-06-06 |     20 | NULL |  100 |     20 | marketing | chicago |
+|  7004 | jhon  | manager   |  7590 | 2005-08-06 |     10 | NULL |  500 |     20 | marketing | chicago |
+|  7004 | jhon  | manager   |  7590 | 2005-08-06 |     10 | NULL |  500 |     10 | accounts  | newyork |
+|  7005 | black | clerk     |  3500 | 2005-09-06 |     30 | NULL |  300 |     20 | marketing | chicago |
++-------+-------+-----------+-------+------------+--------+------+------+--------+-----------+---------+
+4 rows in set (0.00 sec)
+
+69)
+
+
+mysql> select * from employee where sal > (select sal from employee where ename = 'black');
++-------+-------+-----------+-------+------------+--------+------+------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7002 | mason | president | 10000 | 2005-06-06 |     20 | NULL |  100 |
+|  7004 | jhon  | manager   |  7590 | 2005-08-06 |     10 | NULL |  500 |
++-------+-------+-----------+-------+------------+--------+------+------+
+2 rows in set (0.00 sec)
+
+70)
+
+
+mysql> update employee  e, department d  set e.sal= e.sal+e.sal*0.1  where d.deptno = e.deptno and d.loc = 'chicago';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+71)(doubt)
+
+
+mysql> select * from employee where sal > all(select avg(sal) from employee group by deptno);
+Empty set (0.00 sec)
+
+
+
+72)
+
+mysql> select * from employee where deptno!=(select deptno from employee where ename='black');
++-------+-------+-----------+-------+------------+--------+------+------+
+| empno | ename | job       | sal   | hiredate   | deptno | mgr  | comm |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7004 | jhon  | manager   |  7590 | 2005-08-06 |     10 | NULL |  500 |
+|  7002 | mason | president | 11000 | 2005-06-06 |     20 | NULL |  100 |
++-------+-------+-----------+-------+------------+--------+------+------+
+2 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

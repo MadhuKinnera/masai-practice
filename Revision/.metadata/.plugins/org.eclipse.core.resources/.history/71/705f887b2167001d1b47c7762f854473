@@ -1,0 +1,22 @@
+package com.masai.day2;
+
+public class Main {
+	public static void main(String[] args) {
+		Animal cat1 = new Cat();
+		Animal dog1 = new Dog();
+		
+		Animal cat2 = new Cat("pilli");
+		Animal dog2 = new Dog("breed1");
+		
+		Animal cat3 = new Cat("pilli","cat");
+		Animal dog3 = new Dog("breed2","dog");
+		
+		System.out.println(cat1.getName());
+		System.out.println(((Cat)cat1).getNickname());
+		cat1.eat();
+		cat1.sleep()
+		cat1.makeNoise();mamake
+		
+	}
+
+}

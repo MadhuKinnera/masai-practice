@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="stu" class="com.masai.q3.Student">
+<constructor-arg value="10" />
+<constructor-arg value="Madhu" />
+<constructor-arg value="780" />
+</bean>
+
+<bean id="clg" class="com.masai.q3.College">
+<property name="collegeName" value="SVS Group Of Institutions " />
+<property name="student" ref="stu"/>
+<property name="collegeAddress" value="Hanmakonda" />
+</bean>
+
+
+
+
+</beans>

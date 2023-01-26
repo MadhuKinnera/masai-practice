@@ -1,0 +1,19 @@
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		List<Integer> list = List.of(2,3,8,10,1,3);
+		
+		Thread t1 = new Thread(new Thread1());//lazily intitalization
+		
+		
+		
+		t1.start();
+		
+		list.forEach(System.out::println);
+		
+	}
+
+}

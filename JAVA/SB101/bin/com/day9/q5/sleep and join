@@ -1,0 +1,31 @@
+difference between sleep and join
+---------------------------------
+
+sleep()
+-----
+
+* sleep is a static method 
+
+* sleep will prevent the thread for a particular time to dont excute anything
+
+* may give interdmediate data if we sleep a thread in a big calculations.
+
+* only one overlaoded method available
+
+* it is a native method contains some code in native language
+
+
+join()
+------
+
+* join is a non-static method 
+
+* it will stop excuting until its another thread excutes.
+
+* it will give the correct output after completion of the thread.
+
+* There are so many overloaded methods available
+
+* not a native method
+
+

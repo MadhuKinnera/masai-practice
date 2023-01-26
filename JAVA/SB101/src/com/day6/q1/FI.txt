@@ -1,0 +1,23 @@
+Some of the predefined Functional Intefaces are
+
+1. Comparator
+* this is an Functional interface which contains only one abstract method.
+* the method is compare which will take to objects and compare based on given condition
+* it will return an int value 
+* +1 lessthan
+  -1 greaterthan
+   0 equal
+   
+   public int compare (Object o1 , Object o2);
+ 
+ 2.Comparable
+  * this Interface contains compareTo() method 
+  * it will return an int value based on that sorting performed 
+ 
+ 3.Runnable
+ * this Interface contains only run() method 
+ * used to run a Thread
+ 
+ 4.Predator
+ * this Interface contains test() method.
+ * based on condition it will return true or false .

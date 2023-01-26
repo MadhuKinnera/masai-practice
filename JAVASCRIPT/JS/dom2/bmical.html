@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calc</title>
+</head>
+<body>
+    <h1>
+        Check your BMI
+    </h1>
+    <p>Enter your weight and height below to check your BMI results</p>
+    <p>Put your weight in here (KG)</p>
+    <input type="number" id="ip1">
+    <p>And your height in here (CM)</p>
+    <input type="number" id="ip2"> <br>
+    <button>Calculate BMI</button>
+
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",myFunc);
+    function myFunc(event){
+      let w=  document.querySelector("#ip1").value;
+      let h=document.querySelector("#ip2").value;
+      let bmi=w/(h*h/10000);
+      let size;
+      if(bmi<=18.4){
+        size="UnderWeight"
+      }
+      else if(bmi<=24.9){
+          size="Normal Weight";
+      }
+      else if(bmi<=29.9){
+          size="Overweight";
+      }
+      else{
+          size="Obese";
+      }
+      let para= document.createElement("p")
+      para.innerText ="Your BMI is "+bmi.toFixed(1)+" means you are "+size;
+      document.querySelector("body").append(para);
+      
+    }
+</script>

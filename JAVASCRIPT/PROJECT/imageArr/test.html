@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 90%;
+            margin:auto;
+            border:1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4,300px) ;
+        }
+        #container > div{
+            width:300px;
+            height:300px;
+            border:1px solid blue;
+        }
+        img{
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+
+let sandalsArr=[
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e3/P00695569.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 499"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7a/P00660826.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 499"
+    },
+    
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/00/P00695572.jpg",
+        Name:"VALENTINO GARAVANI",
+        Price:"€ 665"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/17/P00641771.jpg",
+        Name:"VALENTINO GARAVANI",
+        Price:"€ 585"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7e/P00665044.jpg",
+        Name:"AQUAZZURA",
+        Price:"€ 505"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2c/P00665056.jpg",
+        Name:"AQUAZZURA",
+        Price:"€ 505"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/18/P00703196.jpg",
+        Name:"ISABEL MARANT",
+        Price:"€ 335"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00703194.jpg",
+        Name:"ISABEL MARANT",
+        Price:"€ 335"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/93/P00695598.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 315"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ce/P00695579.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 315"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a3/P00698515.jpg",
+        Name:"ALAIA",
+        Price:"€ 549"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/61/P00704433.jpg",
+        Name:"THE ATTICO",
+        Price:"€  535"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00704434.jpg",
+        Name:"THE ATTICO",
+        Price:"€ 535"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/45/P00709107.jpg",
+        Name:"GANNI",
+        Price:"€ 275"
+    }
+    ]
+let sandalsOnHoverArr=[
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e3/P00695569_d2.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 499"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/00/P00695572_d2.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 499"
+    },
+    
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7a/P00660826_d2.jpg",
+        Name:"VALENTINO GARAVANI",
+        Price:"€ 665"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/17/P00641771_d2.jpg",
+        Name:"VALENTINO GARAVANI",
+        Price:"€ 585"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7e/P00665044_d2.jpg",
+        Name:"AQUAZZURA",
+        Price:"€ 505"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2c/P00665056_d2.jpg",
+        Name:"AQUAZZURA",
+        Price:"€ 505"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/18/P00703196_d2.jpg",
+        Name:"ISABEL MARANT",
+        Price:"€ 335"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00703194_d2.jpg",
+        Name:"ISABEL MARANT",
+        Price:"€ 335"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/93/P00695598_d2.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 315"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ce/P00695579_d2.jpg",
+        Name:"CHLOÉ",
+        Price:"€ 315"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a3/P00698515_d2.jpg",
+        Name:"ALAIA",
+        Price:"€ 549"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/61/P00704433_d2.jpg",
+        Name:"THE ATTICO",
+        Price:"€  535"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00704434_d2.jpg",
+        Name:"THE ATTICO",
+        Price:"€ 535"
+    },
+    {
+        Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/45/P00709107_d2.jpg",
+        Name:"GANNI",
+        Price:"€ 275"
+    }
+    ]
+let womenDressArr=[
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/1f/P00709974.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 585",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/5d/P00710025.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+      {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00712412.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 499",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00712412.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1555",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e0/P00709999.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a4/P00712474.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 499",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a7/P00712480.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1009",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/35/P00709970.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1429",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8c/P00709981.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 585",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00709993.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 795",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2d/P00709954.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1429",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7d/P00712487.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 415",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ec/P00710001.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/26/P00709987.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    }
+  
+]
+let womenDressOnHoverArr=[
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/1f/P00709974_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 585",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e0/P00709999_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a4/P00712474_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 499",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/30/P00710015_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1555",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e0/P00709999_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a4/P00712474_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 499",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a7/P00712480_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1009",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/35/P00709970_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1429",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/35/P00709970_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 585",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00709993_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 795",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2d/P00709954_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1429",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7d/P00712487_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 415",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ec/P00710001_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    },
+    {
+      Image:"https://img.mytheresa.com/560/560/33/jpeg/catalog/product/26/P00709987_b1.jpg",
+      Name:"LORO PIANA",
+      Price:"€ 1095",
+    }
+  
+]
+display(womenDressOnHoverArr);
+
+
+    function display(arr){
+         arr.forEach(function(ele){
+        let div=document.createElement("div");
+        let img=document.createElement("img");
+        let name=document.createElement("p");
+        let price=document.createElement("p");
+        img.src=ele.Image;
+        name.innerText=ele.Name;
+        price.innerText=ele.Price;
+        div.append(img,name,price);
+        document.querySelector("#container").append(div);
+
+         });
+     
+    }
+</script>

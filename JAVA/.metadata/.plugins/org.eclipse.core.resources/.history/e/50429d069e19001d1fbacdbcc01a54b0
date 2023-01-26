@@ -1,0 +1,33 @@
+package com.day10.q4;
+import java.util.Scanner;
+
+public final class Child extends Parent {
+	
+	Child(int x){
+		super(x);
+		
+	}
+	
+
+	@Override
+	void method1() {
+		System.out.println("method1 inside Child"+this.number);
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("enter a number : ");
+		int num  = sc.nextInt();
+		
+		if(num>0 && num<=10) {
+			Parent p = new Child(num);
+		}
+		else {
+			System.out.println("Invalid Number");
+		}
+	     
+	}
+	
+}

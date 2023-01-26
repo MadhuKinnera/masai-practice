@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Calculator</title>
+    <style> 
+        button{
+         margin:20px;
+        }
+        input{
+            margin-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="ip1" placeholder="enter 1st number">
+    <input type="text" id="ip2" placeholder="enter 2nd number">
+    <br>
+    <button onclick="add()" >Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+</body>
+</html>
+<script>
+    function add(){
+        let a=+document.getElementById("ip1").value;
+        let b=+document.getElementById("ip2").value;
+        alert(a+b);
+    }
+    function sub(){
+        let a=+document.getElementById("ip1").value;
+        let b=+document.getElementById("ip2").value;
+        alert(a-b);
+    }
+    function mul(){
+        let a=+document.getElementById("ip1").value;
+        let b=+document.getElementById("ip2").value;
+        alert(a*b);
+    }
+    function div(){
+        let a=+document.getElementById("ip1").value;
+        let b=+document.getElementById("ip2").value;
+        alert(a/b);
+    }
+</script>

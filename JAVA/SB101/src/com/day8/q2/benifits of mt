@@ -1,0 +1,9 @@
+Benefits of Multi-Threading
+---------------------------
+* We can communicate through thread for common resources
+
+* Speed of the application increases
+
+* We can use mutli processers systems very effeciently
+
+* Switching between threads is more feasible than switching between processes.

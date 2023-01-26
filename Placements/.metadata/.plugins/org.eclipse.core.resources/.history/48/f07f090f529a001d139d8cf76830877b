@@ -1,0 +1,16 @@
+public class Main {
+
+	
+	
+	static public void main(String[] args) {
+		
+		hello();
+		
+		
+	}
+	
+	void static public void hello() {
+		System.out.println("Hello");
+	}
+
+}

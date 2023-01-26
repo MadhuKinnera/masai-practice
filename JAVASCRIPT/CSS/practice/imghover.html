@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.image{
+    width:100px;
+    height: 100px;
+    position:relative;
+    display:block;
+    margin:50px;
+}
+.image  .imgtop{
+    display: none;
+    position: absolute;
+   
+}
+.image:hover .imgtop{
+    top:0;
+    left:0;
+    z-index: 99;
+    cursor: pointer;
+    display: inline;
+}
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="image">
+        <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/27/P00564806.jpg" alt="img-front">
+        <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/27/P00564806_b1.jpg" alt="img-back" class="imgtop">
+    
+    </div>
+</body>
+</html>

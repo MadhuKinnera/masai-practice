@@ -1,0 +1,22 @@
+What are the Spring Stereotype annotations, and what are the main uses of these
+annotations.
+
+
+The annotations used for steroetype classes are known as steroetype annotations.
+
+1. Component
+------------
+* it is used for any layer of class.
+* Spring create bean for this type of classes
+
+2.Repository
+-------------
+* The classes which represents persistence layer contains this annotation
+
+3.Service
+---------
+* the classes represents service layer is denoted with this annotation
+
+4.Controller
+------------
+* The classes represents Presentation layer comes under this category.

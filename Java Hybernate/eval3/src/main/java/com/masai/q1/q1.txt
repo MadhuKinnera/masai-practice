@@ -1,0 +1,42 @@
+Q1/- What do you mean by the IOC, explain the life cycle of the Spring
+Bean.
+
+* IOC container is a Inversion of Control Container .which is responsible for 
+creating a spring bean , giving a bean and maintaining the life cycle of a bean.
+
+Life cycle of spring bean
+-------------------------
+1. Bean not exist
+
+* In this phase eventhough bean class is there the container is not created then the bean is 
+also not created in state.
+
+2. Bean Intiantiated.
+
+* In this cycle the container is created and the beans are also going to be created.
+
+* After bean intiantiated the init- method will called.
+
+3. Bean Intialization
+
+* In this cycle we inject the values to the dependencies using various methods like 
+setter injection or constructor injection or else using autowiring..
+
+4. Spring Operations
+
+* In this phase we perform various operations on beans and manipulate 
+according to our requirement
+
+* Usually perform some business level operations.
+
+5. Bean Destruction
+
+* In this phase bean will be deleted from container.
+
+* before deletion of bean destroy- method will invoke..
+
+usually done after excution of context closing.
+
+
+
+

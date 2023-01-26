@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crauser</title>
+    <style>
+
+
+       #container{
+        position:relative;
+       }
+
+
+        #container > img {
+            width:100%;
+        }
+        button{
+            background-color:transparent;
+            border-color: white;
+            position:absolute;
+            top:130px;
+            width:50px;
+            height:50px;
+            font-size:20px;
+            border-radius:100%;
+            color:white;
+            
+        
+        }
+
+         #left{
+            left:20px;
+         }
+         #right{
+            right:30px;
+         }
+
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="img"   src="https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider1.png" alt="">
+        <button id="left"><</button>
+        <button id="right">></button>
+    </div>
+</body>
+</html>
+<script>
+
+    let imgArr=[
+    "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider1.png",
+    "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider2.png",
+    "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider3.png"
+
+    ];
+    let imgNum=0;
+    leftbutton=document.querySelector("#left");
+    leftbutton.addEventListener("click",myFunc1);
+    rightbutton=document.querySelector("#right");
+    rightbutton.addEventListener("click",myFunc2);
+    img=document.querySelector("#img");
+
+    function myFunc1(){
+        if(imgNum===0){
+            imgNum=imgArr.length-1;
+        }else{
+            imgNum--;
+        }
+        img.src=imgArr[imgNum];
+
+    }
+    function myFunc2(){
+        if(imgNum==imgArr.length-1){
+            imgNum=0;
+        }
+        else{
+            imgNum++;
+        }
+        img.src=imgArr[imgNum];
+    }
+
+</script>
+

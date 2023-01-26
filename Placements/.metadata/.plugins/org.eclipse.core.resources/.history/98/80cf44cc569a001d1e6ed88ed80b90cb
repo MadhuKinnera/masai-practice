@@ -1,0 +1,41 @@
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Set<Student> set = new TreeSet<>((s1, s2) -> s1.getMarks() - s2.getMarks());
+
+		set.add(new Student(1, "Madhu", 200));
+		set.add(new Student(2, "Yash", 700));
+		set.add(new Student(2, "Yash", 700));
+		set.add(new Student(4, "Ramu", 100));
+		set.add(new Student(3, "Raghu", 900));
+
+		Queue<Student> pq = new PriorityQueue<>((s1, s2) -> s1.getMarks() - s2.getMarks());
+
+		pq.add(new Student(1, "Madhu", 200));
+		pq.add(new Student(2, "Yash", 700));
+		pq.add(new Student(2, "Yash", 700));
+		pq.add(new Student(4, "Ramu", 100));
+		pq.add(new Student(3, "Raghu", 900));
+		
+		
+		System.out.println("From TreeSet");
+		
+		for(Student student : set) {
+			System.out.println(student);
+		}
+		
+		System.out.println("From Priority Queue");
+		
+		for(Student student : pq) {
+			System.out.println(student);
+		}
+
+	}
+
+}

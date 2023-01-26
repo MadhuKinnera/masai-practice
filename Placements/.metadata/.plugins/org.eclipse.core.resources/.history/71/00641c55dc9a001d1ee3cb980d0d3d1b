@@ -1,0 +1,12 @@
+public class Main implements Intr1{
+
+	public static void main(String[] args) {
+	   new Main().call();
+	}
+	
+	
+	public void call() {
+		Intr1.super.hello();
+	}
+
+}

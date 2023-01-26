@@ -1,0 +1,37 @@
+
+Exception
+---------
+An Logical Error Occurs at RunTime of a Java program
+
+* Exceptions are 2 types 
+
+1.Checked Exceptions
+2.Unchecked Exceptions
+
+1.Checked Exceptions
+---------------------
+1. These are the exceptions which compiler force to handle.
+2. If we don't handle that exception it will not create a .class file
+3. Mandatory to handle exceptions to convert to program to byte code.
+4. Example Exceptions are :
+  1.ClassNotFoundException
+  2.IOException
+  3.FileNotFoundException
+  and so on..
+ 5. either we need to handle or we can delegate to the caller of the method.
+ 
+ 
+ 2.Unchecked Exceptions
+ -----------------------
+ 1. These Exceptions are not mandatory to handle in program
+ 2. Without Handling these exception .class file can be created.
+ 3. Compiler will give free pass to this exceptions 
+ 4. Example Exceptions are :
+    1. InputMisMatchException
+    2. NumberFormatException
+    3. ArrayIndexOutOfBounds
+    4. ArithmeticException
+    so on...
+    
+ 5. Either we can handle this or ignore to handle.
+  

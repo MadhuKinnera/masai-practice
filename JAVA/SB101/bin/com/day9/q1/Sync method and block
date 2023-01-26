@@ -1,0 +1,21 @@
+Difference between Synchronization method and block
+---------------------------------------------------
+
+1. Sync Method is creates by adding a synchronized keyword to the method.
+which we need to excute in a critical section.
+
+2. Sync Block is the part of method where the actual code which needs 
+critical section
+
+3. By using the sync block the code which doesnt need critical section is used by 
+another threads simutanously
+
+4. This helps to avoid data inconsistency along with fast performance.
+
+5. Using Sync Method may increase application response time and leads 
+to bad experience.
+
+6. Using blocks whereever it is required is recommended.
+
+7. Sync method means no another thread is allowed to use the method until 
+the current thread excution completes.

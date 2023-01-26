@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Sign In
+    </title>
+    <style>
+
+#nav{
+            display:flex;
+            justify-content: space-around;
+            background-color:aquamarine;
+            height:50px;
+            align-items: center;
+            border-radius: 15px;
+            margin-bottom: 100px;
+        }
+
+        #nav > div:first-child{
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:brown;
+        }
+        #nav > div:nth-child(2){
+            font-weight: bolder;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #nav > div:nth-child(3){
+            font-weight: bolder;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    
+
+        #container{
+            width:27%;
+            margin:auto;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            height:250px;
+        }
+        h1{
+            text-align: center;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        input,button{
+            display:block;
+            margin:auto;
+            margin-bottom:20px;
+            padding:5px 10px;
+            border-radius: 5px;
+        }
+        button{
+            background-color: green;
+            border-color: transparent;
+            color:white;
+        }
+        button:hover{
+           cursor: pointer;
+           color:lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+        <div id="nav">
+            <div>BeMAZON</div>
+            <div>  <a href="navbar.html"> HOME</a> </div>
+            <div>
+               <div><a href="signin.html">Sign In</a></div>
+    
+            </div>
+        </div>
+    
+   
+    <div id="container">
+        <form>
+            <h1>Sign In</h1>
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button>Sign In </button>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    let signUpData=JSON.parse(localStorage.getItem("signUpData")) || [];
+    let submit=document.querySelector("button");
+    submit.addEventListener("click",signInFunc);
+    function signInFunc(event){
+        event.preventDefault();
+        let email=document.querySelector("#email").value;
+        let password=document.querySelector("#password").value;
+
+        if(checkUser(email,password)){
+            window.location.href="womens.html";
+        }
+        else{
+            alert("Check Your Email or Password");
+        }
+         
+    }
+
+    function checkUser(email,password){
+        let flag=false;
+        signUpData.forEach(function(ele){
+            if(email==ele.Email && password==ele.Password){
+                flag=true;
+            }
+        });
+        return flag;
+    }
+
+</script>

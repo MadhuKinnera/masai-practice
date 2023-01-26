@@ -1,0 +1,21 @@
+Abstract Class
+--------------
+
+1. Abstract classes are partially implemented classes in java
+2. This class may have or maynot have Abstract methods ..
+3. We are not allowed to create Object to this class
+4. The abstract class meant to be extend
+5. Who ever extend the abstract class he need to override all the abstract methods
+in the class otherwise the class also need to be abstract.
+
+
+Interfaces
+----------
+
+1.Interfaces are fully implemented Stuctures in java.
+2.Before 1.8 java version . all the methods are interfaces are must be 
+abstract and public if we didnt mention it will take by default.
+3. all the variables should be static and public
+4. we need to implement all the abstract methods in the interface in the implements class
+otherwise it needs to be a abstract class.
+5. after 1.8 they introduced static methods and default methods are allowed.

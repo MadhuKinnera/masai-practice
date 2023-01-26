@@ -1,0 +1,17 @@
+package com.madhu;
+
+
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		String from  = "kinneramadhu123@gmail.com";
+		String to  = "hollypoter5@gmail.com";
+		String subject  = "Sending Using Java";
+		String text  = "Iam sending this email using Java Application";
+		
+		
+	}
+
+}

@@ -1,0 +1,70 @@
+1. Explain difference between JPA and Hibernate.
+==============================================
+
+JPA(Java Persistence API)
+----
+* It is an specification for ORM Softwares
+
+* It can able to communicate with all ORM softwares.
+
+* It is Used to Map Java Objects into Database Relation.
+using any one ORM.
+
+* it is ORM independent
+
+
+Hibernate
+---------
+* it is an one of the ORM software which implements JPA
+
+* It is an individual ORM software though it can't communicate
+with any other ORM software framework.
+
+* It Directly Map Java Object Into Database Relation.
+
+* It is ORM Dependent.
+
+2. Explain the Life-cycle of Entity class with example
+=======================================================
+
+There are 3 stages in of entity Class .
+
+1. new State
+
+2. Persistance State
+
+3. Detached State
+
+
+1. New State 
+-------------
+
+* in this state The Entity class object is created and not connected with any 
+relation..
+
+ex: Student s = new Student(10,"Ram",780);
+
+2.Persistence State
+--------------------
+
+* in this state The Object is in Sync with Database Relation..
+
+* Updating in Entity class object will reflect in table..
+
+* Updating in relation reflect in java object.
+
+* in this phase we perform DML operation or CRUD Operations
+
+3. Detached State
+-----------------
+
+* in this state the The Entity class Object is not in sync with 
+database relation.
+
+* hence the changes are not reflect.
+
+* using merge we reflect the changes even if it is in detached state.
+
+
+
+

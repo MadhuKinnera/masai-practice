@@ -1,0 +1,12 @@
+
+public class ThreadExample {
+	
+	
+	public static synchronized void staticThreadMethod() {
+		System.out.println("inside staticThread of thread example class");
+	}
+
+	public synchronized void threadMethod() {
+		System.out.println("inside threadMethod of example class ");
+	}
+}

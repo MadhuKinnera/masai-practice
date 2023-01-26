@@ -1,0 +1,13 @@
+Generics are so much importance in java
+
+1. We are able to pass the parameters independent of DataType of the arguments.
+
+2. We also Declare the Which objects can create the specific class object 
+means we also put some constaints on them.
+
+3. we also make the generics as return type.
+
+4. Generics will help to maintain data consistency and data redundancy.
+
+5. It will warn the user if he misplace the data ..
+before compilation.

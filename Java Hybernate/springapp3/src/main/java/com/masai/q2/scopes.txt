@@ -1,0 +1,14 @@
+How many scopes are there for a Spring Bean, which is the default scope for a Spring
+Bean? Explain with an example.
+
+
+There are 5 scopes in spring bean 
+1. singleton
+2. prototype
+3. request
+4. session
+5. global session
+
+* the default scope of a spring bean is singleton
+
+every time we create an bean object it will give the same reference object everytime.
